@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 238, 226);
+}
+
+#btn{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(229, 203, 155);
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .5);
+    position: relative;
+    overflow: hidden;
+
+}
+#btn span{
+    position: relative;
+    z-index:1;
+}
+#btn::before{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    border-radius: 50px;
+    width: 0px;
+    height: 0px;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50% , -50%);
+    transition: width 1s , height 1s;
+    
+}
+#btn:hover::before{
+    width: 300px;
+    height: 300px;
+
+
+}
